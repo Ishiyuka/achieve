@@ -15,11 +15,16 @@
     <%= form.label :content %>
     <%= form.text_field :content %>
   </div>
-  <div class="picture_content">
+  <div class="field">
     <%= form.label :picture %>
-    <%= form.text_field :picture %>
+    <%= image_tag(@picture.picture.url) if @picture.picture && @picture.picture.url %>
+    <%= form.file_field :picture %>
+    <%= form.hidden_field :picture_cache %>
   </div>
+
+  <div class="actions">
   <%= form.submit %>
+  </div>
 <% end %>
 
 <%= link_to "一覧画面にもどる", pictures_path %>
