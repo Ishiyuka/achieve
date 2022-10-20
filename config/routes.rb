@@ -7,5 +7,5 @@ Rails.application.routes.draw do
     end
   end
   root to: 'users#new'
-
+  resources :favorites, only: [:create, :destroy]
 end

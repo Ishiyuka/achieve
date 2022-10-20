@@ -4,6 +4,9 @@
 
 <% @pictures.each do |picture| %>
   <tr>
+    <td>ユーザー:<%= picture.user.name %></td>
+  </tr>
+  <tr>
     <td>内容:<%= picture.content %></td>
   </tr>
     <td>写真:<%= image_tag picture.picture.url if picture.picture.present? %></td>
