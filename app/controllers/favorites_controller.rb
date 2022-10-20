@@ -1,6 +1,5 @@
 class FavoritesController < ApplicationController
-  before_action :set_picture
-  
+
   def index
     @favorite = Favorite.all
   end
@@ -15,9 +14,3 @@ class FavoritesController < ApplicationController
     redirect_to pictures_path, notice: "#{favorite.picture.user.name}さんの投稿をお気に入り解除しました"
   end
 end
-
-  private
-
-  def set_picture
-    @picture = Picture.find(params[:picture_id])
-  end
