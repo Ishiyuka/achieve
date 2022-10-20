@@ -24,5 +24,10 @@
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %>
 
-  <%= f.submit "Edit" %>
+  <%= f.label :picture %>
+  <%= f.file_field :picture %>
+
+  <%= f.submit "編集する" %>
 <% end %>
+
+<%= link_to "プロフィール一覧に戻る", user_path(@user.id) %>
