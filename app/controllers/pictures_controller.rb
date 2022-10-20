@@ -15,14 +15,11 @@ class PicturesController < ApplicationController
 
   def create
     @picture = current_user.pictures.build(picture_params)
-    if params[:back]
-      render :new
+    if @picture.save
+      ContactMailer.contact_mail(@picture).deliver
+      redirect_to pictures_path, notice: "投稿しました！"
     else
-      if @picture.save
-        redirect_to pictures_path, notice: "作成しました！"
-      else
         render :new
-      end
     end
   end
 
