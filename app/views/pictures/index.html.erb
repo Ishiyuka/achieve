@@ -5,10 +5,7 @@
 <% @pictures.each do |picture| %>
   <tr>
     <td>ユーザー:<%= picture.user.name %></td>
-  </tr>
-  <tr>
     <td>内容:<%= picture.content %></td>
-  </tr>
     <td>写真:<%= image_tag picture.picture.url if picture.picture.present? %></td>
     <td><%= link_to '詳細確認', picture_path(picture.id) %></td>
     <td><%= link_to "編集する", edit_picture_path(picture.id) , data: { confirm: '編集しますか？' } %></td>

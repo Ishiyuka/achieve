@@ -3,6 +3,7 @@ class PicturesController < ApplicationController
 
   def index
     @pictures = Picture.all
+    byebug
   end
 
   def new
@@ -51,7 +52,7 @@ class PicturesController < ApplicationController
   private
 
   def picture_params
-    params.require(:picture).permit(:content, :picture, :picture_cache)
+    params.require(:picture).permit(:user_id, :content, :picture, :picture_cache)
   end
 
   def set_picture

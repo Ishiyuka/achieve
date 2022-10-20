@@ -32,7 +32,7 @@ class UsersController < ApplicationController
 
   def favorites
     @users = User.all
- end
+  end
 
   private
 
