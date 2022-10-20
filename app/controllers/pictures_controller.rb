@@ -3,7 +3,6 @@ class PicturesController < ApplicationController
 
   def index
     @pictures = Picture.all
-    byebug
   end
 
   def new
