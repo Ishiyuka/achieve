@@ -3,3 +3,4 @@ class AddUserRefToPictures < ActiveRecord::Migration[6.1]
     add_reference :pictures, :user, null: false, foreign_key: true
   end
 end
+
