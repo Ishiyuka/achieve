@@ -17,3 +17,24 @@ p {
 td {
   color : white
 }
+
+head {
+  text-align: left;
+}
+.header {
+  position: absolute;
+  width: 100%;
+  background-color: palevioletred;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  background-color: palevioletred
+}
+
+.footer_name {
+  font-size: 100%;
+  color: white;
+  text-align: center;
+  }
