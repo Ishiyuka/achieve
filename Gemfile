@@ -16,6 +16,13 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'letter_opener_web'
 
 group :development, :test do
+  gem 'capistrano', '3.16.0' # capistranoのツール一式
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-unicorn'
+  gem 'ed25519'
+  gem 'bcrypt_pbkdf'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-rails'
   gem 'better_errors'
@@ -52,3 +59,5 @@ gem 'dotenv-rails'
 gem 'rexml'
 
 gem 'faker'
+
+gem 'unicorn' # アプリケーションサーバのunicorn
